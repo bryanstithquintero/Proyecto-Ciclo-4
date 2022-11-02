@@ -1,5 +1,6 @@
-import './App.css';
+import './components/login/login.css';
 import Login from './components/login/login';
+
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Container } from 'react-bootstrap';
 
