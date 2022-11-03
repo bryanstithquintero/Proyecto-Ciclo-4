@@ -14,7 +14,6 @@ export default class login extends Component {
         alert("iniciar sesion funciona")
     }
 
-
     render() {
         return (
 
@@ -24,7 +23,7 @@ export default class login extends Component {
                         <h3 className="Auth-form-title">Registrarse</h3>
                         <div className="text-center">
                             ¿No se encuentra requistrado?
-                            <a className="link-primary link" href='/'>
+                            <a className="link-primary link" href='/Register'>
                                 Registrese
                             </a>
                         </div>
