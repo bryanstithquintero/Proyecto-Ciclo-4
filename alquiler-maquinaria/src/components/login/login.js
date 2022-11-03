@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export default class login extends Component {
     constructor(props) {
@@ -23,9 +24,9 @@ export default class login extends Component {
                         <h3 className="Auth-form-title">Registrarse</h3>
                         <div className="text-center">
                             ¿No se encuentra requistrado?
-                            <a className="link-primary link" href='/Register'>
+                            <Link className="link-primary link" to='/Register'>
                                 Registrese
-                            </a>
+                            </Link>
                         </div>
                         <Form.Group className='form-group mt-3'>
                             <Form.Label className='label'>Email</Form.Label>
