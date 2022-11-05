@@ -1,0 +1,21 @@
+.link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.link:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.link:active {
+    color: #fff;
+}
+
+.link-cerrar {
+    text-decoration: none;
+    color: black;
+}
+
+.link-cerrar:hover {
+    color: rgb(13, 12, 12);
+}
