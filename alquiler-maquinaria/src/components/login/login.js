@@ -48,7 +48,7 @@ export default class login extends Component {
                         </Form.Group>
                         <Form.Group className="d-grid gap-2 mt-3">
                             <button type="submit"
-                                className="btn btn-primary"
+                                className="btn btn-secondary"
                                 onClick={() => { this.iniciarSesion() }}>
                                 ENTRAR
                             </button>
