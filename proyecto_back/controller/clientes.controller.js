@@ -5,8 +5,8 @@ exports.create = function(req,res){
     let cliente = new Cliente ({
         id_cliente:req.body.id_cliente,
         nombre: req.body.nombre,
-        apellido_1:req.body.apellido_p,
-        apellido_2:req.body.apellido_m,
+        apellido_1:req.body.apellido_1,
+        apellido_2:req.body.apellido_2,
         telefono:req.body.telefono,
         mail:req.body.mail,
         direccion:req.body.direccion
@@ -38,8 +38,8 @@ exports.update = function(req,res){
     let cliente = {
         id_cliente:req.body.id_cliente,
         nombre:req.body.nombre,
-        apellido_1:req.body.apellido_p,
-        apellido_2:req.body.apellido_m,
+        apellido_1:req.body.apellido_1,
+        apellido_2:req.body.apellido_2,
         telefono:req.body.telefono,
         mail:req.body.mail,
         direccion:req.body.direccion

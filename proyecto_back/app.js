@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var database = require("./config/database");
 var auth = require("./auth/main_auth");
+
 //router
 var maquinasRouter = require('./routes/maquinas.router');
 var clientesRouter = require('./routes/clientes.router');
