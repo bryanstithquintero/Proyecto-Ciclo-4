@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import axios from 'axios';
+import app from '../../app.json';
 
 export default class Register extends Component {
     constructor(props) {
@@ -13,6 +15,16 @@ export default class Register extends Component {
     }
 
     registro() {
+        axios.post(`${app}/usuarios/register`, {
+            nombreCompleto: this.state.nombreCompleto,
+            direccion: this.state.direccion,
+            telefono: this.state.telefono,
+            email: this.state.email,
+            password: this.state.password,
+        })
+            .then((response) => { console.log(response); })
+            .catch((err) => { console.log(err); })
+
         alert(`los datos son ${this.state.nombreCompleto}`)
     }
     render() {

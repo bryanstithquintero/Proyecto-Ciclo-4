@@ -16,7 +16,7 @@ export default class login extends Component {
     iniciarSesion() {
         alert("iniciar sesion funciona")
 
-        axios.post(`${app}:4000/usuarios/login`, {
+        axios.post(`${app}/usuarios/login`, {
             email: this.state.email,
             password: this.state.password,
         })
