@@ -11,13 +11,13 @@ export default class Navegacion extends Component {
         return (
             <Navbar bg="dark" variant="dark" expand="lg" sticky='top'>
                 <Container>
-                    <Navbar.Brand><NavLink to="/Home"></NavLink>MAQUINARIA</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Brand><NavLink className="link" to="/Home">MAQUINARIA</NavLink></Navbar.Brand>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link><NavLink className="link" to="/Home">Principal</NavLink></Nav.Link>
                             <Nav.Link><NavLink className="link" to="/Equipos">Equipos</NavLink></Nav.Link>
-                            <Nav.Link><NavLink className="link" to="/ListadoEquipos">Lista de Equipos</NavLink></Nav.Link>
+                            <Nav.Link><NavLink className="link" to="/ListaEquipos">Lista de Equipos</NavLink></Nav.Link>
                             <Nav.Link><NavLink className="link" to="/Usuarios">Lista Usuarios</NavLink></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>

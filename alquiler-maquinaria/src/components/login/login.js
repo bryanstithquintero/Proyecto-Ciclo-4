@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import app from '../../app.json';
 
 export default class login extends Component {
     constructor(props) {
@@ -13,7 +15,16 @@ export default class login extends Component {
 
     iniciarSesion() {
         alert("iniciar sesion funciona")
+
+        axios.post(`${app}:4000/usuarios/login`, {
+            email: this.state.email,
+            password: this.state.password,
+        })
+            .then((response) => { console.log(response); })
+            .catch((err) => { console.log(err); })
     }
+
+
 
     render() {
         return (

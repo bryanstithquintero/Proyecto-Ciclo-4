@@ -4,7 +4,7 @@ import Register from './components/register/Register';
 import Navegacion from './components/navbar/Navbar';
 import Home from './components/home/Home';
 import Equipos from './components/equipos/Equipos';
-import ListaEquipos from './components/equipos/ListadoEquipos';
+import ListaEquipos from './components/equipos/ListaEquipos';
 import Usuarios from './components/Usuario/ListaUsuario';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';

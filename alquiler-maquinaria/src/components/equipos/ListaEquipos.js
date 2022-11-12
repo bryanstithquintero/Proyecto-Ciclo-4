@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class ListadoEquipos extends Component {
+export default class ListaEquipos extends Component {
     render() {
         return (
             <div>
