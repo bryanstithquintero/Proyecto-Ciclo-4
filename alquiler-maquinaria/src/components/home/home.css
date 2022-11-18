@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: "Poppins", Arial;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #788487;
+  text-align: left;
+  background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", Arial;
+}
+
+.boton {
+  width: 166px;
+  height: 40px;
+  background: transparent;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 10px;
+  margin-top: 40px;
+  border: 1px solid #14279b;
+  border-radius: 25pc;
+  color: #002b5b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  display: none;
+  gap: 10px;
+}
+input:checked + label {
+  background-color: #617186;
+  border: 1px solid #617186;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  color: #788487;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 2px solid transparent;
+  padding: 1rem 1.875rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  border-radius: 0.1875rem;
+  transition: color 0.15s;
+}
+
+.btn-outline-new-white {
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-lg,
+.btn-group-lg > .btn {
+  padding: 1.1875rem 2.25rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.1875rem;
+}
+
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 0.1125rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.btn.btn-circle {
+  border-radius: 1.875rem;
+}
+
+.module-cover .btn,
+.module-cover-slides .btn {
+  margin: 2px 10px 2px 0;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.imagenHome {
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+.home1 {
+  position: relative;
+  height: auto;
+  padding: 200px 0 200px;
+}
+
+.App {
+  overflow: hidden;
+  position: relative;
+  min-height: 500px;
+}
