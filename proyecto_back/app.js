@@ -3,6 +3,7 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+let cors = require("cors");
 
 var database = require("./config/database");
 //var auth = require("./auth/main_auth");
@@ -27,6 +28,7 @@ app.use("/usuarios", usuariosRouter);
 //app.use(auth)
 
 //router
+app.use(cors())
 app.use("/clientes", clientesRouter);
 app.use("/maquinas", maquinasRouter);
 
