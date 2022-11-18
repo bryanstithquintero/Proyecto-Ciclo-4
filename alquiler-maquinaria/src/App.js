@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import "./components/login/login.css";
 import Login from "./components/login/login";
 import Register from "./components/register/Register";
@@ -6,6 +7,16 @@ import Home from "./components/home/Home";
 import Equipos from "./components/equipos/Equipos";
 import ListaEquipos from "./components/equipos/ListadoEquipos";
 import Usuarios from "./components/Usuario/ListaUsuario";
+=======
+import './components/login/login.css';
+import Login from './components/login/login';
+import Register from './components/register/Register';
+import Navegacion from './components/navbar/Navbar';
+import Home from './components/home/Home';
+import Equipos from './components/equipos/Equipos';
+import ListaEquipos from './components/equipos/ListaEquipos';
+import Usuarios from './components/Usuario/ListaUsuario';
+>>>>>>> 65b1b8f2fa8098fe92abc74d4a235d008e699cc9
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
