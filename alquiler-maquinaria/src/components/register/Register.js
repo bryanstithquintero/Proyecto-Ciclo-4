@@ -6,7 +6,9 @@ export default class Register extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            nombreCompleto: '',
+            nombre: '',
+            apellido_1: '',
+            apellido_2: '',
             direccion: '',
             telefono: '',
             email: '',
@@ -16,7 +18,9 @@ export default class Register extends Component {
 
     registro() {
         axios.post(`${app}/usuarios/register`, {
-            nombreCompleto: this.state.nombreCompleto,
+            nombre: this.state.nombre,
+            apellido_1: this.state.apellido_1,
+            apellido_2: this.state.apellido_2,
             direccion: this.state.direccion,
             telefono: this.state.telefono,
             email: this.state.email,
@@ -38,8 +42,26 @@ export default class Register extends Component {
                             <input
                                 type="text"
                                 className="form-control mt-1"
-                                placeholder="Nombres y apellidos"
-                                onChange={(e) => this.setState({ nombreCompleto: e.target.value })}
+                                placeholder="Nombres"
+                                onChange={(e) => this.setState({ nombre: e.target.value })}
+                            />
+                        </div>
+                        <div className="form-group mt-3">
+                            <label>Primer Apellido </label>
+                            <input
+                                type="text"
+                                className="form-control mt-1"
+                                placeholder="Nombres"
+                                onChange={(e) => this.setState({ apellido_1: e.target.value })}
+                            />
+                        </div>
+                        <div className="form-group mt-3">
+                            <label>Segundo Apellido </label>
+                            <input
+                                type="text"
+                                className="form-control mt-1"
+                                placeholder="Nombres"
+                                onChange={(e) => this.setState({ apellido_2: e.target.value })}
                             />
                         </div>
                         <div className="form-group mt-3">

@@ -1,4 +1,3 @@
-
 import "./components/login/login.css";
 import Login from "./components/login/login";
 import Register from "./components/register/Register";
@@ -7,6 +6,7 @@ import Home from "./components/home/Home";
 import Equipos from "./components/equipos/Equipos";
 import ListaEquipos from "./components/equipos/ListaEquipos";
 import Usuarios from "./components/Usuario/ListaUsuario";
+import EditarUsuario from "./components/Usuario/EditarUsuario"
 
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -24,6 +24,7 @@ function App() {
           <Route path="/Equipos" element={<Equipos />} />
           <Route path="/ListaEquipos" element={<ListaEquipos />} />
           <Route path="/Usuarios" element={<Usuarios />} />
+          <Route path="/EditarUsuario" element={<EditarUsuario />} />
         </Routes>
       </BrowserRouter>
     </div>
