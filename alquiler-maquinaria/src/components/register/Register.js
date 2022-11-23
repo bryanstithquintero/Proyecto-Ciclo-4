@@ -17,6 +17,7 @@ export default class Register extends Component {
     }
 
     registro() {
+
         axios.post(`${app}/usuarios/register`, {
             nombre: this.state.nombre,
             apellido_1: this.state.apellido_1,
@@ -28,6 +29,7 @@ export default class Register extends Component {
         })
             .then((response) => { console.log(response); })
             .catch((err) => { console.log(err); })
+        this.setState({ nombre: "", apellido_1: '', apellido_2: '', direccion: '', telefono: '', email: '', password: '', })
 
         alert(`los datos son ${this.state.nombreCompleto}`)
     }
