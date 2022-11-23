@@ -11,7 +11,7 @@ export default class TablaUsuarios extends Component {
 
     deleteCliente() {
         axios
-            .delete("http://localhost.3001/clientes/" + this.props.obj._id)
+            .delete("http://localhost:3001/clientes/" + this.props.obj._id)
             .then((res) => {
                 console.log("Cliente borrado");
                 alert("Cliente borrado");
@@ -28,7 +28,7 @@ export default class TablaUsuarios extends Component {
                 <td>{this.props.obj.nombre}</td>
                 <td>{this.props.obj.apellido_1 + " " + this.props.obj.apellido_2}</td>
                 <td>{this.props.obj.telefono}</td>
-                <td>{this.props.obj.mail}</td>
+                <td>{this.props.obj.email}</td>
                 <td>{this.props.obj.direccion}</td>
                 <td>
                     <Link to={'/EditarUsuario/' + this.props.obj._id}>

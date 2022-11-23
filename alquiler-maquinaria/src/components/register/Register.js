@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import app from '../../app.json';
+//import app from '../../app.json';
 
 export default class Register extends Component {
     constructor(props) {
@@ -17,7 +17,8 @@ export default class Register extends Component {
     }
 
     registro() {
-        axios.post(`${app}/usuarios/register`, {
+
+        axios.post(`http://localhost:3001/clientes/`, {
             nombre: this.state.nombre,
             apellido_1: this.state.apellido_1,
             apellido_2: this.state.apellido_2,
@@ -28,8 +29,9 @@ export default class Register extends Component {
         })
             .then((response) => { console.log(response); })
             .catch((err) => { console.log(err); })
+        this.setState({ nombre: "", apellido_1: '', apellido_2: '', direccion: '', telefono: '', email: '', password: '', })
 
-        alert(`los datos son ${this.state.nombreCompleto}`)
+        alert(`usuario registrado`)
     }
     render() {
         return (
@@ -79,7 +81,6 @@ export default class Register extends Component {
                                 type="tel"
                                 className="form-control mt-1"
                                 placeholder="3xx-xxx-xxxx"
-                                pattern='[0-9]{10}'
                                 onChange={(e) => this.setState({ telefono: e.target.value })}
                             />
                         </div>
@@ -94,15 +95,6 @@ export default class Register extends Component {
                         </div>
                         <div className="form-group mt-3">
                             <label>Contraseña</label>
-                            <input
-                                type="password"
-                                className="form-control mt-1"
-                                placeholder="Contraseña"
-                                onChange={(e) => this.setState({ password: e.target.value })}
-                            />
-                        </div>
-                        <div className="form-group mt-3">
-                            <label>Confirmar Contraseña</label>
                             <input
                                 type="password"
                                 className="form-control mt-1"
