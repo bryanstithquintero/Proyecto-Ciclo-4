@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row } from "react-bootstrap";
 import "./home.css";
+import axios from "axios";
 
 export default class Home extends Component {
   render() {
