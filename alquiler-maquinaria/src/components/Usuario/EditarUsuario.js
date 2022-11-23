@@ -19,7 +19,7 @@ export default class EditarUsuario extends Component {
 
     componentDidMount() {
         axios
-            .get("http://localhost:3001/clientes/" + this.props.match.params.id)
+            .get("http://localhost:3001/clientes/" + this.props.match.params._id)
             .then((res) => {
                 this.setState({
                     nombre: res.data.nombre,
