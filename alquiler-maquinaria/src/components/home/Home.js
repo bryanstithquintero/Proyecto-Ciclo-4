@@ -178,7 +178,7 @@ export default class Home extends Component {
         </div>
         <CardGroup>
           <Card>
-            <Card.Img variant="top" src="./img/vanessa.jpg" />
+            <Card.Img variant="top" src="./img/vanessa2.jpg" />
             <Card.Body>
               <Card.Title>Audrey Vanessa López Hoyos</Card.Title>
               <Card.Text>Team desarrollo</Card.Text>
@@ -198,11 +198,11 @@ export default class Home extends Component {
             </Card.Body>
           </Card>
           <Card>
-            <Card.Img variant="top" src="./img/camilo.jpg" />
+            <Card.Img variant="top" src="./img/camilo2.jpg" />
             <Card.Body>
               <Card.Title>Camilo Ernesto Cortes Rincon</Card.Title>
               <Card.Text>Team desarrollo</Card.Text>
-              <a>
+              <a href="https://www.linkedin.com/in/camilo-cortes-rincon-626748205">
                 <Card.Text>Linkedin</Card.Text>
               </a>
             </Card.Body>
