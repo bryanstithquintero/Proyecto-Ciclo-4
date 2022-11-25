@@ -13,6 +13,7 @@ export default class EditarEquipos extends Component {
       marca: "",
       unidades: "",
       novedad: "",
+      img: "",
     };
   }
 
@@ -31,6 +32,7 @@ export default class EditarEquipos extends Component {
           marca: res.data.marca,
           unidades: res.data.unidades,
           novedad: res.data.novedad,
+          img: res.data.img,
         });
       })
       .catch((error) => {
@@ -47,6 +49,7 @@ export default class EditarEquipos extends Component {
         marca: this.state.marca,
         unidades: this.state.unidades,
         novedad: this.state.novedad,
+        img: this.state.img,
       })
       .then((response) => {
         console.log(response, "logrado");
@@ -122,6 +125,15 @@ export default class EditarEquipos extends Component {
                 placeholder="Novedades"
                 value={this.state.novedad}
                 onChange={(e) => this.setState({ novedad: e.target.value })}
+              />
+            </div>
+            <div className="form-group mt-3">
+              <label>Link Imagen</label>
+              <input
+                type="text"
+                className="form-control mt-1"
+                placeholder="link de la imagen"
+                onChange={(e) => this.setState({ img: e.target.value })}
               />
             </div>
 

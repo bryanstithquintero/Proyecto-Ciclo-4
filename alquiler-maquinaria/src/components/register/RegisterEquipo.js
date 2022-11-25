@@ -12,6 +12,7 @@ export default class RegisterEquipo extends Component {
       marca: "",
       unidades: "",
       novedad: "",
+      img: "",
     };
   }
 
@@ -24,6 +25,7 @@ export default class RegisterEquipo extends Component {
         marca: this.state.marca,
         unidades: this.state.unidades,
         novedad: this.state.novedad,
+        img: this.state.img
       })
       .then((response) => {
         console.log(response);
@@ -38,6 +40,7 @@ export default class RegisterEquipo extends Component {
       marca: "",
       unidades: "",
       novedad: "",
+      img: "",
     });
 
     alert(`Equipo registrado`);
@@ -100,6 +103,15 @@ export default class RegisterEquipo extends Component {
                 className="form-control mt-1"
                 placeholder="Novedades"
                 onChange={(e) => this.setState({ novedad: e.target.value })}
+              />
+            </div>
+            <div className="form-group mt-3">
+              <label>Link Imagen</label>
+              <input
+                type="text"
+                className="form-control mt-1"
+                placeholder="link de la imagen"
+                onChange={(e) => this.setState({ img: e.target.value })}
               />
             </div>
             <div className="d-grid gap-2 mt-3">
