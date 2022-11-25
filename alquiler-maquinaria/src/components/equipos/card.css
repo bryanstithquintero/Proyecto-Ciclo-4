@@ -1,0 +1,11 @@
+.btonMaq {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.titulos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
