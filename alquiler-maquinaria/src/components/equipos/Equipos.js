@@ -1,35 +1,40 @@
 import React, { Component } from 'react'
 import Card from './Card';
-import image1 from '../../assets/image1.jpg'
+import axios from 'axios';
 
-const cards = [
-    {
-        id: 1,
-        title: "nombre maquina",
-        image: image1,
-        descripcion: "descipcion de la maquina"
-    },
-    {
-        id: 2,
-        title: "nombre maquina 2",
-        image: image1,
-        descripcion: "descripcion de la maquina 2"
-    }
-]
 
 export default class Equipos extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            equipos: []
+        };
+    };
+
+    componentDidMount() {
+        axios
+            .get("http://localhost:3001/maquinas/")
+            .then((res) => {
+                this.setState({ equipos: res.data });
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
+
+    dataCard() {
+        return this.state.equipos.map((res, i) => {
+            return <Card obj={res} key={i} />
+        })
+    }
 
     render() {
         return (
-            <div className='container d-flex justify-content-center align-items-center h-100 p-4'>
+            <div className='container d-flex justify-content-center align-items-center h-100 '>
                 <div className='row'>
-                    {
-                        cards.map((card) => (
-                            <div className='col-md-4' key={card.id}>
-                                <Card title={card.title} imageSource={card.image} descripcion={card.descripcion} />
-                            </div>
-                        ))
-                    }
+                    <div className='col-6 align-items-center p-4 d-flex m-3 col-md-8 d-flex flex-wrap '>
+                        {this.dataCard()}
+                    </div>
                 </div>
             </div>
 

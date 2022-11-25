@@ -133,6 +133,7 @@ export default class EditarEquipos extends Component {
                 type="text"
                 className="form-control mt-1"
                 placeholder="link de la imagen"
+                value={this.state.img}
                 onChange={(e) => this.setState({ img: e.target.value })}
               />
             </div>
