@@ -192,7 +192,7 @@ export default class Home extends Component {
             <Card.Body>
               <Card.Title>Brayan Stith Quintero Guacary</Card.Title>
               <Card.Text>Team desarrollo</Card.Text>
-              <a href="#">
+              <a href="https://www.linkedin.com/in/bryan-quintero">
                 <Card.Text>Linkedin</Card.Text>
               </a>
             </Card.Body>
@@ -202,7 +202,7 @@ export default class Home extends Component {
             <Card.Body>
               <Card.Title>Camilo Ernesto Cortes Rincon</Card.Title>
               <Card.Text>Team desarrollo</Card.Text>
-              <a href="#">
+              <a>
                 <Card.Text>Linkedin</Card.Text>
               </a>
             </Card.Body>
