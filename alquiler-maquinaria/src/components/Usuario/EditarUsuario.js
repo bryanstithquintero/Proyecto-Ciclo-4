@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+const api = process.env.REACT_APP_API;
+
 export default class EditarUsuario extends Component {
   constructor(props) {
     super(props);
@@ -21,7 +23,7 @@ export default class EditarUsuario extends Component {
     const id = window.location.pathname.split("/")[2];
     this.setState({ id: id });
     axios
-      .get("http://localhost:3001/clientes/" + id)
+      .get(`${api}/clientes/` + id)
       .then((res) => {
         console.log(res);
         this.setState({
@@ -41,7 +43,7 @@ export default class EditarUsuario extends Component {
 
   actualizar() {
     axios
-      .put(`http://localhost:3001/clientes/` + this.state.id, {
+      .put(`${api}/clientes/` + this.state.id, {
         nombre: this.state.nombre,
         apellido_1: this.state.apellido_1,
         apellido_2: this.state.apellido_2,

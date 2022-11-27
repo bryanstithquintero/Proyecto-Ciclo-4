@@ -3,6 +3,8 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Button from "react-bootstrap/Button";
 
+const api = process.env.REACT_APP_API;
+
 export default class TablaUsuarios extends Component {
     constructor(props) {
         super(props);
@@ -11,7 +13,7 @@ export default class TablaUsuarios extends Component {
 
     deleteCliente() {
         axios
-            .delete("http://localhost:3001/clientes/" + this.props.obj._id)
+            .delete(`${api}/clientes/` + this.props.obj._id)
             .then((res) => {
                 console.log("Cliente borrado");
                 alert("Cliente borrado");

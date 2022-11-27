@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Card from './Card';
 import axios from 'axios';
 
+const api = process.env.REACT_APP_API;
 
 export default class Equipos extends Component {
     constructor(props) {
@@ -13,7 +14,7 @@ export default class Equipos extends Component {
 
     componentDidMount() {
         axios
-            .get("http://localhost:3001/maquinas/")
+            .get(`${api}/maquinas/`)
             .then((res) => {
                 this.setState({ equipos: res.data });
             })

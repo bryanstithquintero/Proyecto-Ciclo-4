@@ -5,6 +5,8 @@ import Table from "react-bootstrap/Table";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 
+const api = process.env.REACT_APP_API;
+
 export default class ListaEquipos extends Component {
   constructor(props) {
     super(props);
@@ -15,7 +17,7 @@ export default class ListaEquipos extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:3001/maquinas/")
+      .get(`${api}/maquinas/`)
       .then((res) => {
         this.setState({ equipos: res.data });
       })

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 //import app from '../../app.json';
+const api = process.env.REACT_APP_API;
 
 export default class RegisterEquipo extends Component {
   constructor(props) {
@@ -18,7 +19,7 @@ export default class RegisterEquipo extends Component {
 
   registro() {
     axios
-      .post(`http://localhost:3001/maquinas/`, {
+      .post(`${api}/maquinas/`, {
         id_maquina: this.state.id_maquina,
         nombre: this.state.nombre,
         categoria: this.state.categoria,

@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import app from '../../app.json';
+
+const api = process.env.REACT_APP_API;
 
 
 export default class login extends Component {
@@ -17,7 +18,7 @@ export default class login extends Component {
 	iniciarSesion() {
 		alert("iniciar sesion funciona")
 
-		axios.post(`${app}/usuarios/login`, {
+		axios.post(`${api}`, {
 			email: this.state.email,
 			password: this.state.password,
 		})

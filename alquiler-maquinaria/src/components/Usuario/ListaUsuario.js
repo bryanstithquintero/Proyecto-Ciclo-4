@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import TablaUsuarios from './TablaUsuarios';
 import Table from "react-bootstrap/Table";
 
+const api = process.env.REACT_APP_API;
+
 export default class ListaUsuario extends Component {
     constructor(props) {
         super(props);
@@ -13,7 +15,7 @@ export default class ListaUsuario extends Component {
 
     componentDidMount() {
         axios
-            .get('http://localhost:3001/clientes/')
+            .get(`${api}/clientes/`)
             .then((res) => {
                 this.setState({ clientes: res.data, })
 
