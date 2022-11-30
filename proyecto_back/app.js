@@ -28,13 +28,19 @@ app.use("/usuarios", usuariosRouter);
 //app.use(auth)
 
 //router
-app.use(cors())
+app.use(cors());
 app.use("/clientes", clientesRouter);
 app.use("/maquinas", maquinasRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
+});
+
+const port = 4000;
+
+app.listen(port, () => {
+  console.log(port);
 });
 
 // error handler
